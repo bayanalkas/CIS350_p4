@@ -1,13 +1,15 @@
 # CIS350_p4
 ## Empirical Evaluation of Sorting Algorithms
 We are intended to conduct tests in this project to find the values of n for which insertion sort is quicker than quicksort. We need to carry out different experiments using various methods. We must calculate the average number of comparisons, which is the number of comparisons performed on average when sorting a list of n entries. Analysis of the Median-of-Time Three Quicksort with a Cutoff, where the goal is to time how long it takes to sort a random list of 100,000 numbers (each integer is produced at random in the range [0..1,000,000)) using quicksort with a cutoff for cutoff = 3..25.
+
 ## Background:
 Insertion sort is a comparison sort that constructs the sorted array (or list) one element at a time. On huge lists, it is substantially less efficient than more complex algorithms such as quicksort, heapsort, or merge sort. Insertion sort takes an element from the input data and inserts it into the right position in the already-sorted list for each iteration until no input items remain. The decision on which element to delete from the input is arbitrary and may be made with nearly any choice method. Sorting is usually done on-site. After k iterations, the resultant array has the property that the first k+1 elements are sorted. Each iteration, the first remaining input element is removed and added into the result at the right location, hence expanding the result.
 Quicksort is a well-known sorting algorithm that uses O(n log n) comparisons on average to sort n objects. In the worst-case scenario, it performs O(n2) comparisons. Quicksort is often much quicker than other O(n log n) algorithms because its inner loop can be effectively implemented on most architectures, and with most real-world data, design considerations can be made to limit the risk of needing quadratic time. Quicksort is a comparison sort that is not reliable in efficient
 
 ## implementations. 
 Quicksort sorts by dividing a list into two sub-lists using a divide and conquer approach. Quicksort is a comparison sort that is not reliable in efficient implementations.
-Experiments:
+
+## Experiments:
 We must do different experiments using various methods. We must compute the average number of comparisons, which is the average number of comparisons made when sorting a list of n elements. Using different n values and comparing them. The first experiment will ensure that the growth rate for the average number of comparisons required for each sort is consistent. The second experiment will demonstrate how long it takes to sort a list of 100,000 random integers using quicksort with a cutoff.
 Results & Discussion:
 We discovered that our figures for the experiments were correct after reviewing the data and discussing the outcomes. Quicksort is a sorting algorithm that employs the divide and conquer strategy. In the code algorithm, the array is separated into two sublists, one containing the smaller entries and the other containing the bigger elements, and these sublists are then sorted again using recursion. Cut off with insertion sort indicates that whenever you reach array sizes less than a defined cut-off size, you sort these tiny arrays with insertion sort rather than continuing the recursion.
